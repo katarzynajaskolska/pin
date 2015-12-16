@@ -12,7 +12,7 @@ module PinIt
       query_params = options.slice(:url, :media, :description)
       img = tag :img, :src => "//assets.pinterest.com/images/PinExt.png", :title => "Pin It", :border => "0"
       content_tag :a, img, "href" => "#",
-                                "onClick" => "PinWindow=window.open('http://pinterest.com/pin/create/button/?#{query_params.to_query}','PinWindow'); return false;",
+                                "onClick" => "PinWindow=window.open('http://pinterest.com/pin/create/button/?#{query_params.to_query}','PinWindow','width=800, height=600'); return false;",
                                 "class" => "pin-it-button",
                                 "count-layout" => "vertical"
     end
